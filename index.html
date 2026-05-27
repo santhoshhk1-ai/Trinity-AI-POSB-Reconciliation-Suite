@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trinity AI Suite — Elite Free Hosting & Distribution Hub</title>
   <meta name="description" content="Host and distribute Trinity AI Suite tools, updates, and documentation completely free using GitHub Pages and GitHub Releases. Realize zero-cost enterprise-grade file distribution.">
-  <link rel="stylesheet" href="style.css?v=1.0.4">
+  <link rel="stylesheet" href="style.css?v=1.0.5">
 </head>
 <body>
 
@@ -17,6 +17,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="#about" id="link-about">About</a></li>
+        <li><a href="#workflow" id="link-workflow">Workflow</a></li>
         <li><a href="#downloads" id="link-downloads">Downloads</a></li>
         <li><a href="#tutorials" id="link-tutorials">Videos</a></li>
       </ul>
@@ -165,6 +166,73 @@
     </div>
   </section>
 
+  <!-- Reconciliation Workflow Section -->
+  <section id="workflow" style="background: rgba(10, 15, 36, 0.2);">
+    <div class="section-header">
+      <h2>Reconciliation Workflow & Troubleshooting</h2>
+      <p>A summarized guide from the Quick Handbook on preparation, execution, and error resolution.</p>
+    </div>
+    
+    <div class="glass-panel">
+      <h3 style="color: var(--primary); margin-bottom: 1.25rem; font-size: 1.4rem;">📋 Data Preparation Checklist</h3>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem;">Before launching the tools, ensure you have downloaded the following daily inputs from Finacle and local records:</p>
+      <ul class="highlight-list" style="margin-bottom: 2.5rem;">
+        <li><strong>Finacle GL Report:</strong> Daily Transaction GL-wise report (run via <code>IT2.0</code> menu for account range).</li>
+        <li><strong>HO Cash Book:</strong> Local accounting summary spreadsheet of the Head Post Office.</li>
+        <li><strong>SO Summary PDFs:</strong> Compiled PDF report of all subordinate office summaries for the transaction date.</li>
+        <li><strong>Master Mapping Sheet:</strong> The lookup reference file mapping short names to full office names.</li>
+      </ul>
+
+      <h3 style="color: var(--primary); margin-bottom: 1.25rem; font-size: 1.4rem;">🔄 Step-by-Step Execution Pipeline</h3>
+      <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem;">
+        <div style="border-left: 3px solid var(--primary); padding-left: 1.5rem;">
+          <h4 style="color: var(--text-primary); margin-bottom: 0.25rem;">Step 1: Compile Finacle GL (Tool ①)</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Run GL Compiler to parse the raw text reports and output structured Excel sheets grouping transactions by sub-office and account category.</p>
+        </div>
+        <div style="border-left: 3px solid var(--primary); padding-left: 1.5rem;">
+          <h4 style="color: var(--text-primary); margin-bottom: 0.25rem;">Step 2: Parse Sub-Office Summaries (Tool ②)</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Feed the daily SO Summary PDF into the parser to automatically extract and align subordinate office totals into a clean spreadsheet.</p>
+        </div>
+        <div style="border-left: 3px solid var(--accent); padding-left: 1.5rem;">
+          <h4 style="color: var(--text-primary); margin-bottom: 0.25rem;">Step 3: Run Mismatch Report (Tool ③)</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Load the Compiled GL, Parsed SO Summary, and HO Cash Book files. Tool ③ compares the balances, isolates discrepancy amounts, and colors mismatches red.</p>
+        </div>
+      </div>
+
+      <h3 style="color: var(--primary); margin-bottom: 1.25rem; font-size: 1.4rem;">⚠️ Discrepancy Resolution Matrix</h3>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem;">Use this reference table from the Handbook to solve common mismatch indicators:</p>
+      
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 25%;">Discrepancy / Error</th>
+              <th style="width: 30%;">Possible Cause</th>
+              <th>Action / Resolution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight: 600; color: var(--text-primary);">Office Name Mismatch</td>
+              <td style="color: var(--text-secondary);">A new SO has been created or spelling does not match in the Master Mapping.</td>
+              <td style="color: var(--text-secondary);">Run <strong>Office-Mapping Creator v3.1</strong> to update the name references sheet and reload the files.</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; color: var(--text-primary);">BO Balance Excluded</td>
+              <td style="color: var(--text-secondary);">Branch Office transactions are listed separately from their parent HO.</td>
+              <td style="color: var(--text-secondary);">The suite automatically merges BOs under HO totals. Verify parent mapping codes if a mismatch persists.</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; color: var(--text-primary);">CLI Import Crash</td>
+              <td style="color: var(--text-secondary);">Using outdated compiler files or older Python libraries.</td>
+              <td style="color: var(--text-secondary);">Install the latest <strong>v3.1 Patch</strong> to overwrite the CLI library and solve import conflicts.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
 
 
   <!-- Downloads Section -->
@@ -306,6 +374,7 @@
         <h4>Navigation</h4>
         <ul>
           <li><a href="#about">About Suite</a></li>
+          <li><a href="#workflow">Workflow Guide</a></li>
           <li><a href="#downloads">Download Center</a></li>
           <li><a href="#tutorials">Video Tutorials</a></li>
         </ul>
