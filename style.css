@@ -360,6 +360,11 @@ section {
   overflow: hidden;
 }
 
+.feature-card * {
+  position: relative;
+  z-index: 2;
+}
+
 .feature-card::before {
   content: '';
   position: absolute;
@@ -370,10 +375,30 @@ section {
   background: linear-gradient(90deg, transparent, var(--primary), transparent);
   transform: translateX(-100%);
   transition: 0.5s ease;
+  z-index: 3;
+}
+
+.feature-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    rgba(0, 242, 254, 0.08),
+    transparent 80%
+  );
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
 }
 
 .feature-card:hover::before {
   transform: translateX(100%);
+}
+
+.feature-card:hover::after {
+  opacity: 1;
 }
 
 .feature-card:hover {
@@ -478,11 +503,55 @@ section {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.download-card * {
+  position: relative;
+  z-index: 2;
+}
+
+.download-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    rgba(0, 242, 254, 0.08),
+    transparent 80%
+  );
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.download-card.highlighted::after {
+  background: radial-gradient(
+    300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    rgba(224, 86, 253, 0.12),
+    transparent 80%
+  );
+}
+
+.download-card:hover::after {
+  opacity: 1;
+}
+
+.download-card:hover {
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 242, 254, 0.03);
 }
 
 .download-card.highlighted {
   border-color: var(--secondary);
   box-shadow: 0 0 20px rgba(224, 86, 253, 0.1);
+}
+
+.download-card.highlighted:hover {
+  border-color: rgba(224, 86, 253, 0.6);
+  box-shadow: 0 10px 30px rgba(224, 86, 253, 0.15);
 }
 
 .download-meta {

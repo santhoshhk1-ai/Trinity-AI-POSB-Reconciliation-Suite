@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trinity AI Suite — Elite Free Hosting & Distribution Hub</title>
   <meta name="description" content="Host and distribute Trinity AI Suite tools, updates, and documentation completely free using GitHub Pages and GitHub Releases. Realize zero-cost enterprise-grade file distribution.">
-  <link rel="stylesheet" href="style.css?v=1.0.1">
+  <link rel="stylesheet" href="style.css?v=1.0.2">
 </head>
 <body>
 
@@ -390,6 +390,18 @@ git push -u origin main</code></pre>
       } else {
         header.classList.remove('scrolled');
       }
+    });
+
+    // Spotlight Cards Hover effect (Antigravity-style Mouse Glow)
+    const spotlightCards = document.querySelectorAll('.feature-card, .download-card');
+    spotlightCards.forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
     });
   </script>
 </body>
