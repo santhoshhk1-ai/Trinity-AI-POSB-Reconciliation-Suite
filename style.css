@@ -80,6 +80,15 @@ header {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+header.scrolled {
+  background: rgba(5, 8, 20, 0.85);
+  border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 242, 254, 0.1);
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
 .nav-container {
@@ -89,6 +98,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: padding 0.4s ease;
+}
+
+header.scrolled .nav-container {
+  padding: 0.85rem 2rem;
 }
 
 .logo {
@@ -119,12 +133,30 @@ header {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
+  position: relative;
+  padding: 0.5rem 0;
   transition: var(--transition-fast);
 }
 
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px var(--primary-glow);
+}
+
 .nav-links a:hover {
-  color: var(--primary);
-  text-shadow: 0 0 8px var(--primary-glow);
+  color: var(--text-primary);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .btn-header {
