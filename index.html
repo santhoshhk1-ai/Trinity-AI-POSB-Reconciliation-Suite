@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trinity AI Suite — Elite Free Hosting & Distribution Hub</title>
   <meta name="description" content="Host and distribute Trinity AI Suite tools, updates, and documentation completely free using GitHub Pages and GitHub Releases. Realize zero-cost enterprise-grade file distribution.">
-  <link rel="stylesheet" href="style.css?v=1.0.3">
+  <link rel="stylesheet" href="style.css?v=1.0.4">
 </head>
 <body>
 
@@ -19,9 +19,6 @@
         <li><a href="#about" id="link-about">About</a></li>
         <li><a href="#downloads" id="link-downloads">Downloads</a></li>
         <li><a href="#tutorials" id="link-tutorials">Videos</a></li>
-        <li><a href="#guide" id="link-guide">Setup Guide</a></li>
-        <li><a href="#roadmap" id="link-roadmap">Roadmap</a></li>
-        <li><a href="#faq" id="link-faq">FAQ</a></li>
       </ul>
       <a href="#downloads" class="btn-header" id="btn-header-cta">Get Suite</a>
     </div>
@@ -298,124 +295,6 @@
     </div>
   </section>
 
-  <!-- Setup & Deployment Guide Section -->
-  <section id="guide">
-    <div class="section-header">
-      <h2>Setup & Deployment Guide</h2>
-      <p>How to initialize your free hosting workspace in under 5 minutes.</p>
-    </div>
-    <div class="guide-wrapper">
-      <div>
-        <div class="guide-step">
-          <div class="guide-step-title">
-            <span class="step-number">1</span>
-            <h3>Initialize Web Repository</h3>
-          </div>
-          <p>Create a public repository on GitHub. Push this web directory (`index.html` and `style.css`) to the `main` branch.</p>
-          <pre><code>git init
-git add .
-git commit -m "Initialize Trinity Hosting Page"
-git remote add origin https://github.com/your-username/trinity-ai-suite.git
-git branch -M main
-git push -u origin main</code></pre>
-        </div>
-        <div class="guide-step">
-          <div class="guide-step-title">
-            <span class="step-number">2</span>
-            <h3>Enable GitHub Pages</h3>
-          </div>
-          <p>Navigate to repository settings, choose the **Pages** menu, set the build source to **Deploy from a branch**, select `main` (or `/root`), and click **Save**. Your site goes live at `https://your-username.github.io/trinity-ai-suite/` in seconds.</p>
-        </div>
-      </div>
-
-      <div>
-        <div class="guide-step">
-          <div class="guide-step-title">
-            <span class="step-number">3</span>
-            <h3>Upload Installer Releases</h3>
-          </div>
-          <p>Draft a new release on GitHub. Assign a tag (e.g. `v3.1`), upload your compiled `.exe` files from `05_Installers/` as assets, and hit publish.</p>
-        </div>
-        <div class="guide-step">
-          <div class="guide-step-title">
-            <span class="step-number">4</span>
-            <h3>Link Releases to Web Buttons</h3>
-          </div>
-          <p>Update links in the download cards to use the direct release download endpoints to secure stable redirection:</p>
-          <pre><code>&lt;!-- Example direct link pointing to release assets --&gt;
-&lt;a href="https://github.com/username/repo/releases/download/v3.1/Trinity_AI_Patch_v3.1.exe"&gt;</code></pre>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Architecture & Roadmap Section -->
-  <section id="roadmap" style="background: rgba(10, 15, 36, 0.3);">
-    <div class="section-header">
-      <h2>Architecture & Roadmap</h2>
-      <p>Upcoming features and planned phases for Trinity AI Suite distribution portal.</p>
-    </div>
-    <div class="timeline" id="timeline">
-      <div class="timeline-item left">
-        <div class="timeline-content">
-          <h3>Phase 1: Release Base Hub</h3>
-          <p>Publish landing page showing core features and direct links to binaries hosted on Releases.</p>
-        </div>
-      </div>
-      <div class="timeline-item right">
-        <div class="timeline-content">
-          <h3>Phase 2: Automated Auto-Updater API</h3>
-          <p>Integrate light JSON-based configuration script in Python tools to check latest Release tag versions at startup.</p>
-        </div>
-      </div>
-      <div class="timeline-item left">
-        <div class="timeline-content">
-          <h3>Phase 3: Interactive Diagnostics Panel</h3>
-          <p>Create client-side diagnostics to check local files against remote hashes, highlighting outdated tools.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section id="faq">
-    <div class="section-header">
-      <h2>Frequently Asked Questions</h2>
-      <p>Everything you need to know about setting up and running this free infrastructure.</p>
-    </div>
-    <div class="faq-grid" id="faq-grid">
-      <div class="faq-card" id="faq-card-1">
-        <div class="faq-question">
-          <span>Are there file size limits on GitHub Releases?</span>
-          <span class="faq-icon"></span>
-        </div>
-        <div class="faq-answer">
-          Individual release assets can be up to 2GB in size, which is significantly more than required for compiled PyInstaller executables (typically ~20MB to 50MB).
-        </div>
-      </div>
-
-      <div class="faq-card" id="faq-card-2">
-        <div class="faq-question">
-          <span>Will users get security warnings when downloading the EXEs?</span>
-          <span class="faq-icon"></span>
-        </div>
-        <div class="faq-answer">
-          Since the Python executables are compiled locally and not signed with a commercial certificate, Windows SmartScreen may show a warning. Users can click "More info" and then "Run anyway" to execute the utilities.
-        </div>
-      </div>
-
-      <div class="faq-card" id="faq-card-3">
-        <div class="faq-question">
-          <span>Is GitHub Pages secure and private?</span>
-          <span class="faq-icon"></span>
-        </div>
-        <div class="faq-answer">
-          Public repositories on GitHub Pages are public. If you need private downloads restricted to specific operators, you will need to utilize access tokens or basic credentials via alternative setups.
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer Section -->
   <footer>
     <div class="footer-content">
@@ -427,8 +306,8 @@ git push -u origin main</code></pre>
         <h4>Navigation</h4>
         <ul>
           <li><a href="#about">About Suite</a></li>
-          <li><a href="#strategy">Hosting Blueprint</a></li>
           <li><a href="#downloads">Download Center</a></li>
+          <li><a href="#tutorials">Video Tutorials</a></li>
         </ul>
       </div>
       <div class="footer-links">
@@ -448,19 +327,6 @@ git push -u origin main</code></pre>
 
   <!-- Script for interactivity -->
   <script>
-    // FAQ Accordion Interactivity
-    const faqCards = document.querySelectorAll('.faq-card');
-    faqCards.forEach(card => {
-      card.addEventListener('click', () => {
-        const isActive = card.classList.contains('active');
-        // Close all cards first
-        faqCards.forEach(c => c.classList.remove('active'));
-        // Open the clicked one if it was not active
-        if (!isActive) {
-          card.classList.add('active');
-        }
-      });
-    });
 
     // Header Scroll Interactivity
     const header = document.querySelector('header');
