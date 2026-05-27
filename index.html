@@ -20,6 +20,7 @@
         <li><a href="#workflow" id="link-workflow">Workflow</a></li>
         <li><a href="#downloads" id="link-downloads">Downloads</a></li>
         <li><a href="#tutorials" id="link-tutorials">Videos</a></li>
+        <li><a href="#disclaimer" id="link-disclaimer">Disclaimer</a></li>
       </ul>
       <a href="#downloads" class="btn-header" id="btn-header-cta">Get Suite</a>
     </div>
@@ -143,26 +144,6 @@
         </table>
       </div>
 
-      <!-- Developer Info Card -->
-      <div class="dev-card">
-        <div class="dev-info">
-          <h4>Santhosh K</h4>
-          <p>Postal Assistant, Ballari Head Post Office</p>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">
-            Ballari Division &middot; Karnataka Circle &middot; India Post
-          </p>
-        </div>
-        <div class="dev-links">
-          <a href="mailto:trinity.ai.suite@gmail.com">📧 trinity.ai.suite@gmail.com</a>
-          <a href="https://github.com/santhoshhk1-ai/Trinity-AI-POSB-Reconciliation-Suite/releases/download/v3.1.0/Trinity_AI_Suite_Setup_v3.0_20-05-2026.exe">🔗 Full Setup v3.0</a>
-          <a href="https://github.com/santhoshhk1-ai/Trinity-AI-POSB-Reconciliation-Suite/releases/download/v3.1.0/Trinity_AI_Patch_v3.1_25-05-2026.exe">🔗 Patch v3.1</a>
-        </div>
-      </div>
-
-      <!-- Disclaimer -->
-      <div class="disclaimer-text">
-        <strong>Disclaimer:</strong> Trinity AI Suite is an independent initiative developed to support India Post POSB reconciliation operations. It is not officially endorsed by the Department of Posts or India Post.
-      </div>
     </div>
   </section>
 
@@ -197,38 +178,7 @@
           <h4 style="color: var(--text-primary); margin-bottom: 0.25rem;">Step 3: Run Mismatch Report (Tool ③)</h4>
           <p style="color: var(--text-secondary); font-size: 0.9rem;">Load the Compiled GL, Parsed SO Summary, and HO Cash Book files. Tool ③ compares the balances, isolates discrepancy amounts, and colors mismatches red.</p>
         </div>
-      </div>
-
-      <h3 style="color: var(--primary); margin-bottom: 1.25rem; font-size: 1.4rem;">⚠️ Discrepancy Resolution Matrix</h3>
-      <p style="color: var(--text-secondary); margin-bottom: 1rem;">Use this reference table from the Handbook to solve common mismatch indicators:</p>
-      
-      <div class="table-responsive">
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 25%;">Discrepancy / Error</th>
-              <th style="width: 30%;">Possible Cause</th>
-              <th>Action / Resolution</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="font-weight: 600; color: var(--text-primary);">Office Name Mismatch</td>
-              <td style="color: var(--text-secondary);">A new SO has been created or spelling does not match in the Master Mapping.</td>
-              <td style="color: var(--text-secondary);">Run <strong>Office-Mapping Creator v3.1</strong> to update the name references sheet and reload the files.</td>
-            </tr>
-            <tr>
-              <td style="font-weight: 600; color: var(--text-primary);">BO Balance Excluded</td>
-              <td style="color: var(--text-secondary);">Branch Office transactions are listed separately from their parent HO.</td>
-              <td style="color: var(--text-secondary);">The suite automatically merges BOs under HO totals. Verify parent mapping codes if a mismatch persists.</td>
-            </tr>
-            <tr>
-              <td style="font-weight: 600; color: var(--text-primary);">CLI Import Crash</td>
-              <td style="color: var(--text-secondary);">Using outdated compiler files or older Python libraries.</td>
-              <td style="color: var(--text-secondary);">Install the latest <strong>v3.1 Patch</strong> to overwrite the CLI library and solve import conflicts.</td>
-            </tr>
-          </tbody>
-        </table>
+        </div>
       </div>
     </div>
   </section>
@@ -360,6 +310,81 @@
         <h3>Post-Tool — Monthly Consolidator</h3>
         <p>Month-end consolidation of daily discrepancy logs into interactive KPI scorecards and pivots.</p>
       </a>
+  </section>
+
+  <!-- Disclaimer & Developer Section -->
+  <section id="disclaimer" style="background: rgba(10, 15, 36, 0.25);">
+    <div class="section-header">
+      <h2>Disclaimer &amp; Developer</h2>
+      <p>Official notices, licensing constraints, operational conditions, and developer credits from the Suite Handbook.</p>
+    </div>
+    
+    <div class="glass-panel" id="disclaimer-panel">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        
+        <!-- Column 1: Built for Ballari HO -->
+        <div class="feature-card" style="background: rgba(10, 15, 36, 0.4); border: 1px solid rgba(0, 242, 254, 0.1);">
+          <div class="feature-icon" style="color: #ffaa00; background: rgba(255, 170, 0, 0.1); border-color: rgba(255, 170, 0, 0.2);">🏢</div>
+          <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.25rem;">Built for Ballari HO &mdash; Adapted for All HOs</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+            The suite was originally developed and rigorously tested using input files from the developer's parent Head Office, <strong>Ballari HO</strong>, where all three core tools operated smoothly and produced reliable results <em>after many bugs and error fixes</em>.
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-top: 0.75rem;">
+            When the suite was subsequently shared with other Head Offices, it became apparent that <strong>input file formats can vary slightly between HOs</strong> &mdash; particularly in how office names appear in Finacle GL reports vs APT SO Summary PDFs (e.g., <em>"SEZ S.O"</em> in the GL vs <em>"Special Economic Zone P.O"</em> in the SO Summary).
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-top: 0.75rem;">
+            To handle these differences, the <strong>Aliases column</strong> was introduced in the Master Mapping File's Office Mapping sheet, and the tools themselves were updated with fixes to accommodate the variations encountered. The <strong>pre-tool</strong> (HO Office-Mapping Creator) now populates this Aliases column automatically when it detects name discrepancies.
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-top: 0.75rem;">
+            Despite these improvements, the suite <strong>still requires extensive testing</strong> across different Head Offices. If you encounter any HO-specific issue, please email <a href="mailto:trinity.ai.suite@gmail.com" style="color: var(--primary); text-decoration: none;"><strong>trinity.ai.suite@gmail.com</strong></a> with screenshots, at least one set of original input files, and a clear description of the issue.
+          </p>
+        </div>
+
+        <!-- Column 2: Compliance, Endorsement and format dependency -->
+        <div class="feature-card" style="background: rgba(10, 15, 36, 0.4); border: 1px solid rgba(0, 242, 254, 0.1); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="feature-icon" style="color: #ff007f; background: rgba(255, 0, 127, 0.1); border-color: rgba(255, 0, 127, 0.2);">🚫</div>
+            <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.25rem;">No Official Endorsement</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              The Trinity AI POSB Reconciler suite has been independently developed by a postal staff member, with significant assistance from AI, to support the daily reconciliation process. <strong>It has not been officially commissioned, validated, or endorsed by the Department of Posts, India Post, or any other Government of India authority</strong>, and should not be represented as an official Government product.
+            </p>
+          </div>
+          
+          <div style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 1.5rem; margin-top: 1rem;">
+            <div class="feature-icon" style="color: var(--secondary); background: rgba(224, 86, 253, 0.1); border-color: rgba(224, 86, 253, 0.2);">⚙️</div>
+            <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.25rem;">Input Format Dependency</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+              Any change in the format, structure, or content of input files (column names, row layout, sheet structure, or PDF table layout) may cause the tools to malfunction. Always work from <strong>untouched</strong> raw downloads.
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 3: Developer Info -->
+        <div class="feature-card" style="background: rgba(10, 15, 36, 0.4); border: 1px solid rgba(0, 242, 254, 0.1); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="feature-icon" style="color: var(--primary); background: rgba(0, 242, 254, 0.1); border-color: rgba(0, 242, 254, 0.2);">🏛️</div>
+            <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.25rem;">Developer Credits</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+              <strong>Conceptualisation, Design &amp; Development:</strong><br>
+              <strong>Santhosh K</strong>, Postal Assistant &mdash; Ballari Head Post Office, Ballari Division, Karnataka Circle, India Post.
+            </p>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+              <strong>AI Pair-Programming Assistance:</strong><br>
+              Assisted by various GPT-class models &mdash; used strictly as a development aid, not a source of truth.
+            </p>
+          </div>
+          
+          <div style="text-align: center; margin-top: 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+            <div style="font-family: var(--font-mono); color: var(--secondary); letter-spacing: 0.05em; font-size: 0.9rem; margin-bottom: 0.75rem;">
+              &ldquo;Observe &middot; Self-Learn &middot; Test &middot; Apply&rdquo; &mdash; Ekalavya Soft
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">
+              Department of Posts, India
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
