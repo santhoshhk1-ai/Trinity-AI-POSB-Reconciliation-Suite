@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trinity AI Suite — Elite Free Hosting & Distribution Hub</title>
   <meta name="description" content="Host and distribute Trinity AI Suite tools, updates, and documentation completely free using GitHub Pages and GitHub Releases. Realize zero-cost enterprise-grade file distribution.">
-  <link rel="stylesheet" href="style.css?v=1.0.2">
+  <link rel="stylesheet" href="style.css?v=1.0.3">
 </head>
 <body>
 
@@ -18,6 +18,7 @@
       <ul class="nav-links">
         <li><a href="#about" id="link-about">About</a></li>
         <li><a href="#downloads" id="link-downloads">Downloads</a></li>
+        <li><a href="#tutorials" id="link-tutorials">Videos</a></li>
         <li><a href="#guide" id="link-guide">Setup Guide</a></li>
         <li><a href="#roadmap" id="link-roadmap">Roadmap</a></li>
         <li><a href="#faq" id="link-faq">FAQ</a></li>
@@ -251,6 +252,52 @@
     </div>
   </section>
 
+  <!-- Video Tutorials Section -->
+  <section id="tutorials">
+    <div class="section-header">
+      <h2>Video Tutorials & Walk-throughs</h2>
+      <p>Watch step-by-step guides on how to install and operate each tool in the suite.</p>
+    </div>
+    <div class="grid-videos">
+      <!-- Video 1 -->
+      <a class="video-card" href="https://tinyurl.com/Trinity-AI-Setup-v3" target="_blank" rel="noopener">
+        <div class="video-play-btn">▶</div>
+        <h3>Suite Installation Process</h3>
+        <p>How to install the Trinity AI POSB Reconciler suite on your Head Office desktop environment.</p>
+      </a>
+      <!-- Video 2 -->
+      <a class="video-card" href="https://tinyurl.com/Finacle-GL-Compiler" target="_blank" rel="noopener">
+        <div class="video-play-btn">▶</div>
+        <h3>Tool ① — Finacle GL Compiler</h3>
+        <p>Complete walk-through of parsing and compiling daily raw Finacle IT2.0 Transaction GL reports.</p>
+      </a>
+      <!-- Video 3 -->
+      <a class="video-card" href="https://tinyurl.com/SO-Summary-Parser" target="_blank" rel="noopener">
+        <div class="video-play-btn">▶</div>
+        <h3>Tool ② — SO Summary Parser</h3>
+        <p>Demonstration of converting SO Summary PDFs into structured Excel sheets with automatic mapping.</p>
+      </a>
+      <!-- Video 4 -->
+      <a class="video-card" href="https://tinyurl.com/Mismatch-Reporter" target="_blank" rel="noopener">
+        <div class="video-play-btn">▶</div>
+        <h3>Tool ③ — Mismatch Reporter</h3>
+        <p>How to cross-compare accounting logs and generate final color-coded discrepancy summaries.</p>
+      </a>
+      <!-- Video 5 -->
+      <a class="video-card" href="https://tinyurl.com/Office-Mapping-File-Creator" target="_blank" rel="noopener">
+        <div class="video-play-btn">▶</div>
+        <h3>Pre-Tool — Mapping Creator</h3>
+        <p>Onboarding guide to build the office name matching database dynamically on first setup.</p>
+      </a>
+      <!-- Video 6 -->
+      <a class="video-card" href="https://tinyurl.com/Reconciliation-Consolidator" target="_blank" rel="noopener">
+        <div class="video-play-btn">▶</div>
+        <h3>Post-Tool — Monthly Consolidator</h3>
+        <p>Month-end consolidation of daily discrepancy logs into interactive KPI scorecards and pivots.</p>
+      </a>
+    </div>
+  </section>
+
   <!-- Setup & Deployment Guide Section -->
   <section id="guide">
     <div class="section-header">
@@ -426,7 +473,7 @@ git push -u origin main</code></pre>
     });
 
     // Spotlight Cards Hover effect (Antigravity-style Mouse Glow)
-    const spotlightCards = document.querySelectorAll('.feature-card, .download-card');
+    const spotlightCards = document.querySelectorAll('.feature-card, .download-card, .video-card');
     spotlightCards.forEach(card => {
       card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
