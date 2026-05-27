@@ -49,15 +49,123 @@
   <section id="about">
     <div class="section-header">
       <h2>About Trinity AI Suite</h2>
-      <p>A modular, highly optimized AI-driven utility collection helping Indian Post POSB reconciliations.</p>
+      <p style="font-family: var(--font-mono); color: var(--secondary); letter-spacing: 0.05em; font-size: 1rem; margin-top: 0.5rem;">
+        &ldquo;Observe &middot; Self-Learn &middot; Test &middot; Apply&rdquo; &mdash; Ekalavya Soft
+      </p>
     </div>
     <div class="glass-panel" id="about-panel">
-      <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
-        The Trinity AI Suite represents a paradigm shift in local postal audit automation, merging Python-based parsing systems with an intelligent, easy-to-use desktop suite. Built by post office developers for field operators, the suite runs entirely client-side, eliminating cloud database overhead.
+      <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7;">
+        Trinity AI Suite is a purpose-built reconciliation toolset developed for India Post POSB (Post Office Savings Bank) operations, designed to automate and simplify the daily financial reconciliation workflow at Head Post Offices.
       </p>
-      <p style="font-size: 1.1rem; color: var(--text-secondary);">
-        Because the suite relies on self-contained executables (e.g., Mismatch Reporter, SO Summary Parser), distributing updates effectively across divisions is a critical operational requirement. This portal demonstrates how to leverage free ecosystem resources to build an automated, secure distribution pipeline.
+      <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.7;">
+        The suite bridges the gap between three critical data sources &mdash; the HO Cash Book, Finacle IT2.0 GL Reports, and Subordinate Office (SO) Summary PDFs &mdash; and produces accurate, colour-coded mismatch reports in seconds, replacing hours of manual Excel work.
       </p>
+
+      <h3 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.4rem;">What It Does</h3>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+        The suite consists of 5 integrated tools, each addressing a specific stage of the reconciliation pipeline:
+      </p>
+      
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 5%;">#</th>
+              <th style="width: 30%;">Tool</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td style="font-weight: 600; color: var(--text-primary);">Finacle GL Compiler v2.2</td>
+              <td style="color: var(--text-secondary);">Parses raw Finacle IT2.0 Transaction GL-wise reports and compiles them into office-wise, account-code-wise Excel data</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td style="font-weight: 600; color: var(--text-primary);">SO Summary Parser v3.47</td>
+              <td style="color: var(--text-secondary);">Converts SO Summary PDFs into structured Excel format using intelligent office-name matching</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td style="font-weight: 600; color: var(--text-primary); color: var(--primary);">Mismatch Reporter v20.5</td>
+              <td style="color: var(--text-secondary);">Cross-compares Cash Book, Finacle GL, and SO Summary data; produces colour-coded discrepancy reports per office and account code</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td style="font-weight: 600; color: var(--text-primary);">Monthly Reconciliation Consolidator v2.4</td>
+              <td style="color: var(--text-secondary);">Aggregates daily mismatch reports into a monthly workbook with summaries, pivots, and office scorecards</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td style="font-weight: 600; color: var(--text-primary);">HO Office-Mapping Creator v3.1</td>
+              <td style="color: var(--text-secondary);">Generates the office-name mapping reference sheet by intelligently matching SO names across data sources</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem; font-size: 1.4rem;">Key Highlights</h3>
+      <ul class="highlight-list">
+        <li><strong>Zero manual intervention:</strong> Load your files, click Run, get results instantly.</li>
+        <li><strong>Intelligent name matching:</strong> Handles spelling variations, abbreviations, and multi-token office names.</li>
+        <li><strong>BO figures handled correctly:</strong> Branch Office amounts are correctly merged into HO totals.</li>
+        <li><strong>Encrypted branding assets:</strong> Professional animated logos secured with AES-128 Fernet.</li>
+        <li><strong>Works completely offline:</strong> Zero internet requirements, zero cloud reliance, no subscriptions.</li>
+        <li><strong>Windows 10/11 compatible:</strong> Installs directly to <code>C:\Trinity AI POSB Reconciler v3.0</code>.</li>
+        <li><strong>Auto-backup on update:</strong> Patch installer backs up your current versions before overwriting.</li>
+      </ul>
+
+      <h3 style="color: var(--primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.4rem;">Version History</h3>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 20%;">Release</th>
+              <th style="width: 20%;">Date</th>
+              <th>Key Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight: 600; color: var(--text-primary);">v3.1 Patch</td>
+              <td style="font-family: var(--font-mono);">25-05-2026</td>
+              <td style="color: var(--text-secondary);">Mismatch Reporter v20.5, Monthly Compiler v2.4, Office Mapping v3.1</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; color: var(--text-primary);">v3.0 Full Setup</td>
+              <td style="font-family: var(--font-mono);">20-05-2026</td>
+              <td style="color: var(--text-secondary);">Full suite rebranded as Trinity AI, 5-tool package</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; color: var(--text-primary);">v2.0</td>
+              <td style="font-family: var(--font-mono);">Early 2026</td>
+              <td style="color: var(--text-secondary);">Trinetra &rarr; Trinity, added Monthly Compiler and Office Mapping</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Developer Info Card -->
+      <div class="dev-card">
+        <div class="dev-info">
+          <h4>Santhosh K</h4>
+          <p>Postal Assistant, Ballari Head Post Office</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">
+            Ballari Division &middot; Karnataka Circle &middot; India Post
+          </p>
+        </div>
+        <div class="dev-links">
+          <a href="mailto:trinity.ai.suite@gmail.com">📧 trinity.ai.suite@gmail.com</a>
+          <a href="https://github.com/santhoshhk1-ai/Trinity-AI-POSB-Reconciliation-Suite/releases/download/v3.1.0/Trinity_AI_Suite_Setup_v3.0_20-05-2026.exe">🔗 Full Setup v3.0</a>
+          <a href="https://github.com/santhoshhk1-ai/Trinity-AI-POSB-Reconciliation-Suite/releases/download/v3.1.0/Trinity_AI_Patch_v3.1_25-05-2026.exe">🔗 Patch v3.1</a>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="disclaimer-text">
+        <strong>Disclaimer:</strong> Trinity AI Suite is an independent initiative developed to support India Post POSB reconciliation operations. It is not officially endorsed by the Department of Posts or India Post.
+      </div>
     </div>
   </section>
 

@@ -897,11 +897,121 @@ footer {
     left: 25px;
     right: auto;
   }
-  .pipeline-diagram {
-    flex-direction: column;
-  }
   .pipeline-connector {
     transform: rotate(90deg);
     margin: 0.5rem 0;
   }
 }
+
+/* Premium Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+th {
+  font-family: var(--font-title);
+  color: var(--primary);
+  font-weight: 600;
+  background: rgba(0, 242, 254, 0.03);
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  background: rgba(10, 15, 36, 0.2);
+  margin-bottom: 2rem;
+}
+
+/* List highlight styles */
+ul.highlight-list {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+ul.highlight-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+}
+
+ul.highlight-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0.5rem;
+  color: var(--primary);
+  text-shadow: 0 0 8px var(--primary-glow);
+}
+
+/* Developer signature card */
+.dev-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.dev-info h4 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.dev-info p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.dev-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.dev-links a {
+  color: var(--primary);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+  border: 1px solid var(--border-glow);
+  padding: 0.35rem 0.85rem;
+  border-radius: 4px;
+  background: rgba(0, 242, 254, 0.02);
+}
+
+.dev-links a:hover {
+  background: var(--primary);
+  color: var(--bg-darker);
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+.disclaimer-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 2.5rem;
+  line-height: 1.5;
+  border-top: 1px dashed rgba(255, 255, 255, 0.05);
+  padding-top: 1.5rem;
+}
+
