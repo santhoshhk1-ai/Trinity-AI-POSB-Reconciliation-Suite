@@ -17,8 +17,6 @@
       </a>
       <ul class="nav-links">
         <li><a href="#about" id="link-about">About</a></li>
-        <li><a href="#strategy" id="link-strategy">Hosting Strategy</a></li>
-        <li><a href="#features" id="link-features">Features</a></li>
         <li><a href="#downloads" id="link-downloads">Downloads</a></li>
         <li><a href="#guide" id="link-guide">Setup Guide</a></li>
         <li><a href="#roadmap" id="link-roadmap">Roadmap</a></li>
@@ -40,8 +38,8 @@
       A high-performance offline tool suite designed to compile Finacle GL balances, parse sub-office summaries, match cash books, and resolve mismatches instantly.
     </p>
     <div class="hero-ctas">
-      <a href="#strategy" class="btn-primary" id="btn-cta-primary">Explore Hosting Strategy</a>
-      <a href="#downloads" class="btn-secondary" id="btn-cta-secondary">View Downloads</a>
+      <a href="#downloads" class="btn-primary" id="btn-cta-primary">Download Suite</a>
+      <a href="#about" class="btn-secondary" id="btn-cta-secondary">Learn More</a>
     </div>
   </section>
 
@@ -169,80 +167,7 @@
     </div>
   </section>
 
-  <!-- Free Hosting Strategy Section -->
-  <section id="strategy" style="background: rgba(10, 15, 36, 0.3);">
-    <div class="section-header">
-      <h2>Free Hosting Strategy Map</h2>
-      <p>Deploy your landing page on CDN and host large installers via releases at zero cost.</p>
-    </div>
-    <div class="strategy-map">
-      <!-- Pipeline Diagram -->
-      <div class="pipeline-diagram" id="pipeline-diagram">
-        <div class="pipeline-node" id="node-src">
-          <span class="step-num">01. DEVELOP</span>
-          <h4>Python Scripts</h4>
-          <p>Local updates in python source files</p>
-        </div>
-        <div class="pipeline-connector">&rarr;</div>
-        <div class="pipeline-node" id="node-build">
-          <span class="step-num">02. COMPILE</span>
-          <h4>PyInstaller / ISS</h4>
-          <p>Build standalone EXEs and installers</p>
-        </div>
-        <div class="pipeline-connector">&rarr;</div>
-        <div class="pipeline-node" id="node-release">
-          <span class="step-num">03. RELEASE</span>
-          <h4>GitHub Releases</h4>
-          <p>Upload large executables as release assets</p>
-        </div>
-        <div class="pipeline-connector">&rarr;</div>
-        <div class="pipeline-node" id="node-web">
-          <span class="step-num">04. DEPLOY</span>
-          <h4>GitHub Pages</h4>
-          <p>Static landing page pulls release downloads</p>
-        </div>
-      </div>
 
-      <div class="glass-panel" style="width: 100%;" id="strategy-panel">
-        <h3 style="margin-bottom: 1rem; color: var(--primary);">Architecture Highlights</h3>
-        <ul style="list-style-position: inside; color: var(--text-secondary); margin-bottom: 1.5rem;">
-          <li style="margin-bottom: 0.5rem;"><strong>GitHub Pages (Static Hosting):</strong> Serves landing page assets (HTML, CSS, JS) instantly using GitHub's global CDN network.</li>
-          <li style="margin-bottom: 0.5rem;"><strong>GitHub Releases (Large File Storage):</strong> Acts as a secure object storage backend for large updates, patch installers, and user manuals, with no file size limits or bandwidth fees.</li>
-          <li style="margin-bottom: 0.5rem;"><strong>Dynamic Update Management:</strong> Website links always map to `latest` tags to serve automatic updates directly from the repository version API.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features">
-    <div class="section-header">
-      <h2>Engineered for Zero Maintenance</h2>
-      <p>High availability, high speed, and zero bills.</p>
-    </div>
-    <div class="grid-features">
-      <div class="feature-card" id="feat-1">
-        <div class="feature-icon">&#128184;</div>
-        <h3>Zero-Cost Hosting</h3>
-        <p>100% free web page and executable file distribution hosting with no server maintenance bills.</p>
-      </div>
-      <div class="feature-card" id="feat-2">
-        <div class="feature-icon">&#128230;</div>
-        <h3>Release Versioning</h3>
-        <p>Keep old patch binaries stored safely under standard semantic version tags for rolling rollbacks.</p>
-      </div>
-      <div class="feature-card" id="feat-3">
-        <div class="feature-icon">&#9889;</div>
-        <h3>Fast Global CDN</h3>
-        <p>Powered by GitHub CDN infrastructure. Fast downloads for installers and patches, even on remote DSL connections.</p>
-      </div>
-      <div class="feature-card" id="feat-4">
-        <div class="feature-icon">&#128737;</div>
-        <h3>Robust Execution</h3>
-        <p>Bypasses firewall and network limitations of locally self-hosted drives or internal databases.</p>
-      </div>
-    </div>
-  </section>
 
   <!-- Downloads Section -->
   <section id="downloads" style="background: rgba(10, 15, 36, 0.3);">
